@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu & Bài Tập</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f8ff;
+            color: #1a237e;
+            position: relative;
+            text-align: center;
+        }
+        .background-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: url('https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/Image%20FP_2024/anh-meo-13.png') no-repeat center center/cover;
+            z-index: -1;
+            opacity: 0.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .profile h1 {
+            font-size: 26px;
+            color: #0d47a1;
+        }
+        .profile p {
+            font-size: 18px;
+            color: #1565c0;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: white;
+            background: #0d47a1;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .nav a:hover {
+            background: #1565c0;
+            transform: scale(1.05);
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: left;
+        }
+        .show {
+            display: block;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #0d47a1;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-img"></div>
+    <div class="container">
+        <div class="profile">
+            <h1>Trần Thuỳ Dung</h1>
+        </div>
+        <div class="nav">
+            <a href="#" onclick="showContent('intro')">Giới Thiệu</a>
+            <a href="#" onclick="showContent('baiTap')">Bài Tập</a>
+        </div>
+        <div id="intro" class="content">
+            <h2>Giới Thiệu</h2>
+            <p>Họ và tên: Trần Thuỳ Dung</p>
+            <p>Ngày sinh: 13/01/2006</p>
+            <p>Quê quán: Nam Định</p>
+            <p>Trình độ học vấn: Đại học</p>
+            <p>Ngành học: Công nghệ thông tin</p>
+            <p>Sở thích: Ăn uống, nghe nhạc, đọc sách</p>
+        </div>
+        <div id="baiTap" class="content">
+            <h2>Danh Sách Bài Tập</h2>
+            <ul>
+                <li><a href="bai11b4.html">Bài tập 1.1</a></li>
+                <li><a href="bai12b4.html">Bài tập 1.2</a></li>
+                <li><a href="bai2b4.html">Bài tập 2</a></li>
+                <li><a href="bai31b4.html">Bài tập 3.1</a></li>
+                <li><a href="bai32b4.html">Bài tập 3.2</a></li>
+                <li><a href="bai33b4.html">Bài tập 3.3</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function showContent(id) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('show'));
+            document.getElementById(id).classList.add('show');
+        }
+    </script>
+</body>
+</html>
